@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <script>
+        function validateLogin() {
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            // Validation
+            if (username === "") {
+                alert("Username cannot be empty");
+                return false;
+            }
+
+            if (password === "") {
+                alert("Password cannot be empty");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters");
+                return false;
+            }
+
+            // If all validations pass
+            alert("Login Successful!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Login Form</h2>
+
+    <form onsubmit="return validateLogin()">
+        <label>Username:</label><br>
+        <input type="text" id="username"><br><br>
+
+        <label>Password:</label><br>
+        <input type="password" id="password"><br><br>
+
+        <input type="submit" value="Login">
+    </form>
+
+</body>
+</html>

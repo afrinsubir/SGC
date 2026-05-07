@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>ex</title> 
+    </head>
+<body>
+    <p id="p1">this is a paragraph</p>
+    <input type="text" id="para"><br><br>
+    <input type="button" value="click me" onclick="changeP()">
+    <script>
+        function changeP(){
+            let newText=document.getElementById("para").value;
+            document.getElementById("p1").innerHTML=newText;
+        }
+    </script>
+</body>
+</html>

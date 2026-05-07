@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sort Array in Descending Order</title>
+        <script>
+        function sortNumbers() {
+            // Ask user for numbers separated by commas
+            let input = prompt("Enter numbers separated by commas (e.g. 5,2,9,1,7):");
+
+            if (input) {
+                let numbers = input.split(",").map(num => parseFloat(num.trim()));
+                document.getElementById("original").textContent = numbers.join(", ");
+                let sortedArray = numbers.sort((a, b) => b - a);
+                document.getElementById("sorted").textContent = sortedArray.join(", ");
+            } else {
+                alert("No input provided!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Sort Numbers in Descending Order</h2>
+
+    <button onclick="sortNumbers()">Enter Numbers</button>
+
+    <p>Original Array: <span id="original"></span></p>
+    <p>Sorted Array (Descending): <span id="sorted"></span></p>
+</body>
+</html>

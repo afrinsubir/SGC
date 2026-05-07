@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+    <script>
+        function add() {
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            let output=a+b;
+            document.getElementById("result").innerHTML="result="+output;
+        }
+
+        function sub() {
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            let output=a-b;
+            document.getElementById("result").innerHTML="result="+output;
+        }
+
+        function mul() {
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            let output=a*b;
+            document.getElementById("result").innerHTML="result="+output;
+        }
+
+        function div() {
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            let output=a/b;
+            document.getElementById("result").innerHTML="result="+output;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Calculator</h2>
+
+    <input type="text" id="a" placeholder="First number"><br><br>
+    <input type="text" id="b" placeholder="Second number"><br><br>
+
+    <button onclick="add()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="mul()">*</button>
+    <button onclick="div()">/</button>
+
+    <h3 id="result"></h3>
+
+</body>
+</html>
